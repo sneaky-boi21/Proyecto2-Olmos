@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+  }
+
+html,
+body .wrapper {
+    height: 100%;
+}
+
+  body {
+    display: grid;
+    place-items: center;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: rgba(232,237,240,1);
+    box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.15000000596046448);
+    overflow: hidden;
+  }
+
+  .Subfondo {
+    width: 1264px;
+    height: 890px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 67px;
+    overflow: hidden;
+  }
+  .Cuadrado {
+    width: 544px;
+    height: 390px;
+    background: rgba(244,249,253,1);
+    opacity: 1;
+    position: absolute;
+    top: 111px;
+    left: 76px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15000000596046448);
+    overflow: hidden;
+  }
+  .SubCuadrado {
+    width: 240px;
+    height: 48px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 9px;
+    overflow: hidden;
+  }
+  
+  .Subtitulo1 {
+    width: 80px;
+    color: rgba(15,45,72,1);
+    position: absolute;
+    top: 9px;
+    left: 78px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 16px;
+    opacity: 1;
+    text-align: left;
+  }
+  .Subtitulo2 {
+    width: 71px;
+    color: rgba(112,134,155,1);
+    position: absolute;
+    top: 30px;
+    left: 97px;
+    font-family: Montserrat;
+    font-weight: Medium;
+    font-size: 8px;
+    opacity: 1;
+    text-align: left;
+  }
+  .Ejercicios {
+    width: 217px;
+    height: 309px;
+    background: rgba(184,200,214,1);
+    opacity: 1;
+    position: absolute;
+    top: 68px;
+    left: 12px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    overflow: hidden;
+  }
+  .Ej1 {
+    width: 55px;
+    color: rgba(15,45,72,1);
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 10px;
+    opacity: 1;
+    text-align: left;
+  }
+  .Icono1 {
+    width: 7px;
+    height: 8px;
+    background: rgba(238,244,249,1);
+    opacity: 1;
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    border: 1.349189281463623px solid rgba(125,144,162,1);
+  }
+  .Det1 {
+    width: 46px;
+    color: rgba(15,45,72,1);
+    position: absolute;
+    top: 37px;
+    left: 48px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 10px;
+    opacity: 1;
+    text-align: left;
+  }
+  
+  .Ej2 {
+    width: 57px;
+    color: rgba(15,45,72,1);
+    position: absolute;
+    top: 71px;
+    left: 20px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 10px;
+    opacity: 1;
+    text-align: left;
+  }
+  .Icono2 {
+    width: 7px;
+    height: 8px;
+    background: rgba(238,244,249,1);
+    opacity: 1;
+    position: absolute;
+    top: 74px;
+    left: 7px;
+    border: 1.349189281463623px solid rgba(125,144,162,1);
+  }
+  .Det2 {
+    width: 46px;
+    color: rgba(15,45,72,1);
+    position: absolute;
+    top: 103px;
+    left: 48px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 10px;
+    opacity: 1;
+    text-align: left;
+  }
+  
+  .Ej3 {
+    width: 57px;
+    color: rgba(15,45,72,1);
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 10px;
+    opacity: 1;
+    text-align: left;
+  }
+  .Icono3 {
+    width: 7px;
+    height: 8px;
+    background: rgba(238,244,249,1);
+    opacity: 1;
+    position: absolute;
+    top: 143px;
+    left: 7px;
+    border: 1.349189281463623px solid rgba(125,144,162,1);
+  }
+  .Det3 {
+    width: 46px;
+    color: rgba(15,45,72,1);
+    position: absolute;
+    top: 172px;
+    left: 48px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 10px;
+    opacity: 1;
+    text-align: left;
+  }
+  
+  
+  .Ej4 {
+    width: 58px;
+    color: rgba(15,45,72,1);
+    position: absolute;
+    top: 209px;
+    left: 20px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 10px;
+    opacity: 1;
+    text-align: left;
+  }
+  .Icono4 {
+    width: 7px;
+    height: 8px;
+    background: rgba(238,244,249,1);
+    opacity: 1;
+    position: absolute;
+    top: 212px;
+    left: 7px;
+    border: 1.349189281463623px solid rgba(125,144,162,1);
+  }
+  .Det4 {
+    width: 46px;
+    color: rgba(15,45,72,1);
+    position: absolute;
+    top: 241px;
+    left: 48px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 10px;
+    opacity: 1;
+    text-align: left;
+  }
+  .Titulo {
+    width: 723px;
+    height: 64px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 17px;
+    left: 22px;
+    overflow: hidden;
+  }
+  .Titulo1 {
+    width: 256px;
+    color: rgba(14,44,72,1);
+    position: absolute;
+    top: 24px;
+    left: 11px;
+    font-family: Montserrat;
+    font-weight: Bold;
+    font-size: 32px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v501_89 {
+    width: 723px;
+    height: 25px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .Titulo2 {
+    width: 101px;
+    color: rgba(112,134,155,1);
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 17px;
+    opacity: 1;
+    text-align: left;
+  }
+  
+  .Cuadro2 {
+    width: 101px;
+    height: 53px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 359px;
+    right: 226px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05999999865889549);
+    overflow: hidden;
+  }
+  
+  .Calif {
+    width: 90px;
+    color: rgba(125,144,162,1);
+    position: absolute;
+    top: 15px;
+    left: 2px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 12px;
+    opacity: 1;
+    text-align: center;
+  }
+  .Cuadro1 {
+    width: 101px;
+    height: 53px;
+    background: rgba(24,136,239,1);
+    opacity: 1;
+    position: absolute;
+    top: 260px;
+    right: 226px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05999999865889549);
+    overflow: hidden;
+  }
+  
+  .Retro {
+    width: 88px;
+    color: rgba(226,241,255,1);
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 12px;
+    opacity: 1;
+    text-align: center;
+  }
+  
