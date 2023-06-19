@@ -1,0 +1,33 @@
+{
+  "name": "taller_node_js",
+  "version": "1.0.0",
+  "description": "This is the final project for the node.js workshop",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yauma9/taller_node_js"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "express",
+    "nodejs"
+  ],
+  "author": "Pablo QA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yauma9/taller_node_js.git/issues"
+  },
+  "homepage": "https://github.com/Yauma9/taller_node_js.git#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.22"
+  }
+}
