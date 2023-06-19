@@ -1,7 +1,7 @@
 {
-  "name": "taller_node_js",
+  "name": "Proyecto2-Olmos",
   "version": "1.0.0",
-  "description": "This is the final project for the node.js workshop",
+  "description": "Este es el proyecto final para la clase sistemas distribuidos",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yauma9/taller_node_js"
+    "url": "git+https://github.com/sneaky-boi21/Proyecto2-Olmos"
   },
   "keywords": [
     "api",
@@ -20,9 +20,9 @@
   "author": "Pablo QA",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Yauma9/taller_node_js.git/issues"
+    "url": "https://github.com/sneaky-boi21/Proyecto2-Olmos.git/issues"
   },
-  "homepage": "https://github.com/Yauma9/taller_node_js.git#readme",
+  "homepage": "https://github.com/sneaky-boi21/Proyecto2-Olmos.git#readme",
   "dependencies": {
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",

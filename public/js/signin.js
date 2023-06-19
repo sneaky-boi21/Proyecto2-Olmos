@@ -15,6 +15,7 @@ function init() {
 
 function signin() {
     var name = document.getElementById('input-name').value;
+    var pass = document.getElementById('input-account').value;
     var mail = document.getElementById('input-mail').value;
     var pass = document.getElementById('input-password').value;
 
