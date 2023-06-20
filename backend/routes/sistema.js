@@ -75,7 +75,7 @@ tareas.get('/:id([0-9]{1,3})', async (req, res, next) => {
         const pkmn = await db.query("SELECT * FROM tareas WHERE id_tarea="+id+";");
         return res.status(200).json({ code: 200, message: pkmn});
     }
-        return res.status(404).send({ code: 404, message: "Tarea no encontrado"});
+        return res.status(404).send({ code: 404, message: "Tarea no encontrada"});
 }); 
 
 tareas.get('/:name([A-Za-z]+)', async (req, res, next) => {
