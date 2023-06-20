@@ -1,21 +1,16 @@
 window.onload = init;
 function init() {
-    if(!localStorage.getItem("token")) {
         document.querySelector('.btn-secondary').addEventListener('click', function() {
             window.location.href = "login.html"
         });
     
         document.querySelector('.btn-primary').addEventListener('click', signin);
-    
-    } else {
-        window.location.href = "sistema.html";
-    }
 };
 
 
 function signin() {
     var name = document.getElementById('input-name').value;
-    var pass = document.getElementById('input-account').value;
+    var user = document.getElementById('input-role').value;
     var mail = document.getElementById('input-mail').value;
     var pass = document.getElementById('input-password').value;
 
@@ -25,6 +20,7 @@ function signin() {
         url: 'http://localhost:3000/user/signin',
         data: {
             user_name:name,
+            user_check:user,
             user_mail:mail,
             user_password:pass
         }
