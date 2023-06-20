@@ -1,6 +1,6 @@
 const express = require('express');
 const tareas = express.Router();
-const db = require('../config/database');
+const db = require('../../config/database');
 
 
 tareas.post("/", async (req, res, next) => {
