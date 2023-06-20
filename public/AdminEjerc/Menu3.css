@@ -26,7 +26,6 @@ body .wrapper {
     top: 17px;
     left: 22px;
   }
-
   .Titulo1 {
     color: #0e2c48;
     position: absolute;
@@ -76,8 +75,8 @@ body .wrapper {
     width: 80px;
     color: rgba(15,45,72,1);
     position: absolute;
-    top: 9px;
-    left: 109px;
+    top: 0px;
+    left: 110px;
     font-family: Montserrat;
     font-weight: SemiBold;
     font-size: 46px;
@@ -89,8 +88,8 @@ body .wrapper {
     width: 71px;
     color: rgba(112,134,155,1);
     position: absolute;
-    top: 60px;
-    left: 147px;
+    top: 45px;
+    left: 157px;
     font-family: Montserrat;
     font-weight: Medium;
     font-size: 28px;
@@ -100,18 +99,19 @@ body .wrapper {
 
   .Ejercicios {
     width: calc(100% - 48px); 
-    height: calc(100% - 128px); 
+    height: calc(100% - 128px);
     background: rgba(184, 200, 214, 1);
+    opacity: 1;
     position: absolute;
-    top: 104px; 
-    left: 12px; 
+    top: 64px; 
+    left: 12px;
     right: 12px;
     border-radius: 6px;
     overflow: hidden;
     margin: 12px; 
-    margin: 12px; 
   }
   
+
   .Ej1 {
     width: 55px;
     color: rgba(15,45,72,1);
@@ -136,18 +136,6 @@ body .wrapper {
     border: 1.349189281463623px solid rgba(125,144,162,1);
   }
 
-  .Det1 {
-    width: 46px;
-    color: rgba(15,45,72,1);
-    position: absolute;
-    top: 37px;
-    left: 48px;
-    font-family: Montserrat;
-    font-weight: SemiBold;
-    font-size: 10px;
-    opacity: 1;
-    text-align: left;
-  }
   
   .Ej2 {
     width: 57px;
@@ -173,19 +161,6 @@ body .wrapper {
     border: 1.3491892
     81463623px solid rgba(125,144,162,1);
   }
-
-  .Det2 {
-    width: 46px;
-    color: rgba(15,45,72,1);
-    position: absolute;
-    top: 103px;
-    left: 48px;
-    font-family: Montserrat;
-    font-weight: SemiBold;
-    font-size: 10px;
-    opacity: 1;
-    text-align: left;
-  }
   
   .Ej3 {
     width: 57px;
@@ -199,6 +174,7 @@ body .wrapper {
     opacity: 1;
     text-align: left;
   }
+
   .Icono3 {
     width: 7px;
     height: 8px;
@@ -208,18 +184,6 @@ body .wrapper {
     top: 143px;
     left: 7px;
     border: 1.349189281463623px solid rgba(125,144,162,1);
-  }
-  .Det3 {
-    width: 46px;
-    color: rgba(15,45,72,1);
-    position: absolute;
-    top: 172px;
-    left: 48px;
-    font-family: Montserrat;
-    font-weight: SemiBold;
-    font-size: 10px;
-    opacity: 1;
-    text-align: left;
   }
   
   .Ej4 {
@@ -245,77 +209,123 @@ body .wrapper {
     border: 1.349189281463623px solid rgba(125,144,162,1);
   }
 
-  .Det4 {
-    width: 46px;
+  .Ej5 {
+    width: 58px;
     color: rgba(15,45,72,1);
     position: absolute;
-    top: 241px;
-    left: 48px;
+    top: 269px;
+    left: 20px;
     font-family: Montserrat;
     font-weight: SemiBold;
     font-size: 10px;
     opacity: 1;
     text-align: left;
   }
-  .ejercicio {
+  .Icono5 {
+    width: 7px;
+    height: 8px;
+    background: rgba(238,244,249,1);
+    opacity: 1;
+    position: absolute;
+    top: 269px;
+    left: 7px;
+    border: 1.349189281463623px solid rgba(125,144,162,1);
+  }
+
+  .Ej6 {
     width: 58px;
-    color: rgba(15, 45, 72, 1);
+    color: rgba(15,45,72,1);
     position: absolute;
+    top: 329px;
+    left: 20px;
     font-family: Montserrat;
     font-weight: SemiBold;
     font-size: 10px;
     opacity: 1;
     text-align: left;
   }
-  .detalle {
-    width: 46px;
-    color: rgba(15, 45, 72, 1);
+  .Icono6 {
+    width: 7px;
+    height: 8px;
+    background: rgba(238,244,249,1);
+    opacity: 1;
     position: absolute;
+    top: 329px;
+    left: 7px;
+    border: 1.349189281463623px solid rgba(125,144,162,1);
+  }
+
+  .Ej7 {
+    width: 58px;
+    color: rgba(15,45,72,1);
+    position: absolute;
+    top: 389px;
+    left: 20px;
     font-family: Montserrat;
     font-weight: SemiBold;
     font-size: 10px;
     opacity: 1;
     text-align: left;
   }
-  
+  .Icono7 {
+    width: 7px;
+    height: 8px;
+    background: rgba(238,244,249,1);
+    opacity: 1;
+    position: absolute;
+    top: 389px;
+    left: 7px;
+    border: 1.349189281463623px solid rgba(125,144,162,1);
+  }
+
+  .Ej8 {
+    width: 58px;
+    color: rgba(15,45,72,1);
+    position: absolute;
+    top: 449px;
+    left: 20px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 10px;
+    opacity: 1;
+    text-align: left;
+  }
+  .Icono8 {
+    width: 7px;
+    height: 8px;
+    background: rgba(238,244,249,1);
+    opacity: 1;
+    position: absolute;
+    top: 449px;
+    left: 7px;
+    border: 1.349189281463623px solid rgba(125,144,162,1);
+  }
+
   .RetroA {
-    width: 20%;
-    height: 10%;
-    background: rgba(24,136,239,1);
+    width: 101px;
+    height: 53px;
+    background: #1888ef;
     opacity: 1;
     position: absolute;
-    top: 26%;
-    right: 12%;
+    top: 260px;
+    right: 226px;
     border-radius: 9px;
     font-family: Montserrat;
     font-weight: SemiBold;
-    font-size: 2vw;
+    font-size: 12px;
     box-shadow: 0px 0px 7px #0000000f;
     overflow: hidden;
-    transition: margin 0.2s;
   }
   
-  .RetroA:hover {
-    margin: 5px;
-  }
-  
-  .Calif {
-    width: 20%;
-    height: 10%;
+  .VerMas {
+    width: 101px;
+    height: 53px;
     background: rgba(255,255,255,1);
     opacity: 1;
     position: absolute;
-    top: 55%;
-    right: 12%;
+    top: 359px;
+    right: 226px;
     border-radius: 9px;
-    font-family: Montserrat;
-    font-weight: SemiBold;
-    font-size: 2vw;
     box-shadow: 0px 0px 7px #0000000f;
     overflow: hidden;
-    transition: margin 0.2s;
-  }
-  
-  .Calif:hover {
-    margin: 5px;
   }
