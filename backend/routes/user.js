@@ -41,7 +41,7 @@ user.post("/login", async (req, res, next) => {
 });
 
 user.get("/", async (req, res, next) => {
-    const { user_mail} = req.body;
+    const user_mail = req.params.user_check;
     const query = `SELECT user_check FROM user WHERE user_mail = '${user_mail}'`;
     const rows = await db.query(query);
 
