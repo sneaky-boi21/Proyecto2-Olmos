@@ -45,7 +45,7 @@ user.get("/", async (req, res, next) => {
     const query = `SELECT user_check FROM user WHERE user_mail = '${user_mail}'`;
     const rows = await db.query(query);
 
-    return res.status(200).json({ code: 200, message: rows });
+    return res.status(200).json({code: 200, message: rows});
 });
 
 module.exports = user;
