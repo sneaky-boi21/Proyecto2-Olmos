@@ -10,7 +10,7 @@ function init() {
                 'Authorization': "bearer " + localStorage.getItem("token")
             }
         }
-        loadEmpleados();
+        loadCalificaciones();
     } else {
         window.location.href = "index.html";
     }
@@ -37,7 +37,6 @@ function displayCalificaciones(tareas) {
       <th>Calificacion</th>
     </tr>`
     for( var i = 0; i < tareas.length; i++) {
-
 
         body.innerHTML +=  
         `<table>
