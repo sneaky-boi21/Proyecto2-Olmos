@@ -10,23 +10,23 @@ function init() {
                 'Authorization': "bearer " + localStorage.getItem("token")
             }
         }
-        loadCalificaciones();
+        loadTareas();
     } else {
         window.location.href = "login.html";
     }
 }
 
-function loadCalificaciones() {
+function loadTareas() {
     axios.get(url + "/sistema", headers)
     .then(function(res) {
         console.log(res);
-        displayCalificaciones(res.data.message);
+        displayTareas(res.data.message);
     }).catch(function(err){
         console.log(err);
     })
 }
 
-function displayCalificaciones(tareas) {
+function displayTareas(tareas) {
     var body = document.querySelector("Body");
     body.innerHTML += `
 
@@ -34,7 +34,11 @@ function displayCalificaciones(tareas) {
     <tr>
       <th>ID Tarea</th>
       <th>Nombre Tarea</th>
+      <th>Materia</th>
       <th>Calificacion</th>
+      <th>Fecha de Entrega</th>
+      <th>Retroalimentacion</th>
+      <th>Archivo</th>
     </tr>`
     for( var i = 0; i < tareas.length; i++) {
 
@@ -44,7 +48,10 @@ function displayCalificaciones(tareas) {
         <h3>
           <td>${tareas[i].id_tarea}</td>
           <td>${tareas[i].nombre_tarea}</td>
-          <td>${tareas[i].calificacion}</td>
+          <td>${tareas[i].materia}</td>
+          <td>${tareas[i].fecha_entrega}</td>
+          <td>${tareas[i].retroalimentacion}</td>
+          <td>${tareas[i].archivo}</td>
         </h3>
         </tr>
         </table>`
