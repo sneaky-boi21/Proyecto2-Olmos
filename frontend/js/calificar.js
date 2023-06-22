@@ -13,34 +13,29 @@ function init() {
 function update() {
     var id_tarea = document.getElementById('input-id').value;
 
-    if(nombre && apellidos && telefono && correo && direccion) {
+    if(nombre_tarea && materia && calificacion && fecha_entrega && id_profesor && id_alumno && retroalimentacion && archivo) {
             axios({
             method: 'put',
-            url: `http://localhost:3000/sistema/${id_empleado}`,
+            url: `http://localhost:3000/sistema/${id_tarea}`,
             data: {
-                id_empleado:id_empleado
+                id_tarea:id_tarea
             }
         }).then(function(res) {
             console.log(res);
-            alert("Update exitoso");
+            alert("Actualizacion exitosa");
             }).catch(function(err) {
             console.log(err);
         })
     } else {
         axios({
             method: 'patch',
-            url: `http://localhost:3000/sistema/${id_empleado}`,
+            url: `http://localhost:3000/sistema/${id_tarea}`,
             data: {
-                nombre:nombre,
-                apellidos:apellidos,
-                telefono:telefono,
-                correo:correo,
-                direccion:direccion,
-                id_empleado:id_empleado
+                calificacion:calificacion,
             }
         }).then(function(res) {
             console.log(res);
-            alert("Update exitoso");
+            alert("Calificado correctamente");
             }).catch(function(err) {
             console.log(err);
         })
