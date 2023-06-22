@@ -66,7 +66,6 @@ function login() {
         if (res.data.code === 200) {
             localStorage.setItem("token", res.data.message);
 
-            // Retrieve user information after successful login
             axios({
                 method: 'get',
                 url: 'http://localhost:3000/user/',
@@ -77,13 +76,13 @@ function login() {
                 var userType = response.data.message;
                 console.log(res);
                 if (userType === 'maestro') {
-                    // User is a teacher
-                    window.location.href = "teacher.html";
+                    //Usuario es maestro
+                    window.location.href = "Maestros1.html";
                 } else if (userType === 'alumno') {
-                    // User is a student
-                    window.location.href = "student.html";
+                    //Usurio es estudiante
+                    window.location.href = "Alumnos1.html";
                 } else {
-                    // Handle other user types or unknown types
+                    //Manejo de errores
                     alert("Tipo de usuario desconocido");
                 }
             }).catch(function (error) {
