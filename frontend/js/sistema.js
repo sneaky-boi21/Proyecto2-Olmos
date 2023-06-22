@@ -12,7 +12,7 @@ function init() {
         }
         loadEmpleados();
     } else {
-        window.location.href = "index.html";
+        window.location.href = "login.html";
     }
 }
 

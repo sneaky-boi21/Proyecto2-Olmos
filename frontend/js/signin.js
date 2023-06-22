@@ -20,7 +20,7 @@ function signin() {
         url: 'http://localhost:3000/user/signin',
         data: {
             user_name:name,
-            user_check:user,
+            user_type:user,
             user_mail:mail,
             user_password:pass
         }
