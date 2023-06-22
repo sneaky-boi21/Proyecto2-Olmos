@@ -11,21 +11,17 @@ function init() {
     }      
 
 function insert() {
-    var nombre = document.getElementById('input-name').value;
-    var materia = document.getElementById('input-subject').value;
-    var fecha_entrega = document.getElementById('input-date').value;
+    var archivo = document.getElementById('input-file').value;
 
     axios({
         method: 'post',
         url: 'http://localhost:3000/sistema/', 
         data: {
-            nombre:nombre,
-            materia:materia,
-            fecha_entrega:fecha_entrega,
+            archivo:archivo,
         }
     }).then(function(res) {
         console.log(res);
-        alert("Tarea creada exitosamente");
+        alert("Tarea subida exitosamente");
         }).catch(function(err) {
         console.log(err);
     })
