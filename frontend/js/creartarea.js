@@ -3,16 +3,13 @@ var headers = {};
 var url = "http://localhost:3000";
 
 function init() {
-    document.querySelector('.btn-secondary').addEventListener('click', function() {
-        window.location.href = "sistema.html"
-    });
-
     document.querySelector('.btn-primary').addEventListener('click', insert); 
     }      
 
 function insert() {
     var nombre = document.getElementById('input-name').value;
     var materia = document.getElementById('input-subject').value;
+    var detalles = document.getElementById('input-desc').value;
     var fecha_entrega = document.getElementById('input-date').value;
 
     axios({
@@ -21,6 +18,7 @@ function insert() {
         data: {
             nombre:nombre,
             materia:materia,
+            detalles:detalles,
             fecha_entrega:fecha_entrega,
         }
     }).then(function(res) {

@@ -4,11 +4,11 @@ const db = require('../../config/database');
 
 
 tareas.post("/", async (req, res, next) => {
-    const {nombre_tarea, materia, calificacion, fecha_entrega, id_profesor, id_alumno, retroalimentacion, archivo} = req.body;
+    const {nombre_tarea, materia, detalles, calificacion, fecha_entrega, id_profesor, id_alumno, retroalimentacion, archivo} = req.body;
 
-    if(nombre_tarea && materia && calificacion && fecha_entrega && id_profesor && id_alumno && retroalimentacion && archivo) {
-        let query = "INSERT INTO tareas(nombre_tarea, materia, calificacion, fecha_entrega, id_profesor, id_alumno, retroalimentacion, archivo)";
-        query += ` VALUES ('${nombre_tarea}', '${materia}', '${calificacion}', '${fecha_entrega}', '${id_profesor}', 
+    if(nombre_tarea && materia && detalles && calificacion && fecha_entrega && id_profesor && id_alumno && retroalimentacion && archivo) {
+        let query = "INSERT INTO tareas(nombre_tarea, materia, detalles, calificacion, fecha_entrega, id_profesor, id_alumno, retroalimentacion, archivo)";
+        query += ` VALUES ('${nombre_tarea}', '${materia}', '${detalles}', '${calificacion}', '${fecha_entrega}', '${id_profesor}', 
         '${id_alumno}', '${retroalimentacion}', '${archivo}')`;
     
         const rows = await db.query(query);
@@ -32,10 +32,10 @@ tareas.delete("/:id([0-9]{1,3})", async (req, res, next) => {
 });
 
 tareas.put("/:id([0-9]{1,3})", async (req, res, next) => {
-    const {nombre_tarea, materia, calificacion, fecha_entrega, id_profesor, id_alumno, retroalimentacion, archivo} = req.body;
+    const {nombre_tarea, materia, detalles, calificacion, fecha_entrega, id_profesor, id_alumno, retroalimentacion, archivo} = req.body;
 
-    if(nombre_tarea, materia && calificacion && fecha_entrega && id_profesor && id_alumno && retroalimentacion && archivo) {
-        let query = `UPDATE tareas SET nombre_tarea='${nombre_tarea}',materia='${materia}',calificacion='${calificacion}',
+    if(nombre_tarea, materia && detalles && calificacion && fecha_entrega && id_profesor && id_alumno && retroalimentacion && archivo) {
+        let query = `UPDATE tareas SET nombre_tarea='${nombre_tarea}',materia='${materia}',detalles='${detalles}', calificacion='${calificacion}',
         fecha_entrega='${fecha_entrega}',id_profesor='${id_profesor}',id_alumno='${id_alumno}'
         ,retroalimentacion='${retroalimentacion}',archivo='${archivo}' WHERE id_tarea=${req.params.id};`;
     
