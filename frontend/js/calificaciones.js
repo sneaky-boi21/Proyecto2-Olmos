@@ -27,7 +27,7 @@ function loadCalificaciones() {
 }
 
 function displayCalificaciones(tareas) {
-    var body = document.querySelector("body");
+    var body = document.querySelector("Body");
     body.innerHTML += `
 
     <table>
@@ -42,9 +42,9 @@ function displayCalificaciones(tareas) {
         `<table>
         <tr>
         <h3>
-          <td>${empleados[i].id_tarea}</td>
-          <td>${empleados[i].nombre_tarea}</td>
-          <td>${empleados[i].calificacion}</td>
+          <td>${tareas[i].id_tarea}</td>
+          <td>${tareas[i].nombre_tarea}</td>
+          <td>${tareas[i].calificacion}</td>
         </h3>
         </tr>
         </table>`

@@ -23,7 +23,7 @@ app.use("/user", user);
 //app.use(auth);
 
 
-app.use("/public", sistema);
+app.use("/sistema", sistema);
 app.use(notFound);
 
 app.listen(process.env.PORT || 3000, () => {
