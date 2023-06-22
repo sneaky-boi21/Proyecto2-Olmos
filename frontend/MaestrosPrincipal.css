@@ -117,58 +117,58 @@ body {
 
 
 .RetroA {
-  width: 20%;
-  height: 10%;
-  background: rgba(24,136,239,1);
-  position: absolute;
-  top: 26%;
-  right: 12%;
-  border-radius: 9px;
-  font-family: Montserrat;
-  font-weight: SemiBold;
-  font-size: 1.9vw;
-  box-shadow: 0px 0px 7px #0000000f;
-  transition: margin 0.2s;
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  text-align: start;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0e2c48;
+  background-color: #F4F9FD;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
 }
 
 .RetroA:hover {
-  margin: 5px;
+  background-color: #B8C8D6;
 }
 
-.Calif {
-  width: 20%;
-  height: 10%;
-  background: rgba(255,255,255,1);
-  position: absolute;
-  top: 26%;
-  left: 12%;
-  border-radius: 9px;
-  font-family: Montserrat;
-  font-weight: SemiBold;
-  font-size: 2vw;
-  box-shadow: 0px 0px 7px #1111110f;
-  transition: margin 0.2s;
+.RetroA.active {
+  background-color: #F4F9FD;
 }
 
-.Calif:hover {
-  margin: 5px;
+.RetroA:active {
+  background-color: #1d456b;
 }
 
-.VerMas {
-  width: 20%;
-  height: 10%;
-  background: #1888ef;
-  position: absolute;
-  top: 459px;
-  right: 39%;
-  border-radius: 9px;
-  font-family: Montserrat;
-  font-weight: SemiBold;
-  font-size: 2vw;
-  box-shadow: 0px 0px 7px #0000000f;
-  transition: margin 0.2s;
+.Close-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0e2c48;
+  background-color: #B8C8D6;
+  border: none;
 }
 
-.VerMas:hover {
-  margin: 5px;
+.Close-button:hover {
+  background-color: #E8EDF0;
+  cursor: pointer;
+}
+
+.Sidebutton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #B8C8D6;
+  border: none;
+}
+
+.Sidebutton:hover {
+  background-color: #E8EDF0;
+  cursor: pointer;
 }
