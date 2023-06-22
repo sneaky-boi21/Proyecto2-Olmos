@@ -2,25 +2,50 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="MaestrosPrincipal.css" rel="stylesheet" />
 </head>
 <body>
-   <div class="Subfondo">
-      <div class="Titulo">
-          <span class="Titulo1">Menu Principal</span>
-            <span class="Titulo2">Maestros</span>
-          </div>
+  <div class="Sidebar" style="display:none" id="miSidebar">
+    <button class="Close-button" onclick="side_cerrar()">Cerrar &times;</button>
+    <a href="MaestrosCrear.html" class="RetroA">Crear Asignaciones</a>
+    <a href="MaestrosCalif.html" class="RetroA">Ver Calificaciones</a>
+    <a href="MaestrosTareas.html" class="RetroA">Ver Tareas</a>
+    <a href="MaestrosDiagramas.html" class="RetroA">Crear Diagramas</a>
+  </div>
+  <div id="main">
+    <button id="openNav" class="Sidebutton" onclick="side_abrir()">&#9776;</button>
+    <div class="Contenedor">
+      <div class="Subfondo">
+        <div class="Titulo">
+            <span class="Titulo1">Menu Principal</span>
+              <span class="Titulo2">Maestros</span>
+            </div>
+        </div>
       <div class="Cuadrado">
         <div class="SubCuadrado"></div>
             <span class="Subtitulo1">Ejercicios</span>
             <span class="Subtitulo2">Asignados</span>
                 <div class="Ejercicios">
                   <div id="ejercicios-container"></div>
-                </div>
-              <button class="RetroA" onclick="window.location.href = 'test.html'">Crear Asignaciones</button>
-          <button class="Calif">Calificaciones</button>
-        <button class="VerMas">Ver Tareas</button>
-    </div>
+          </div>
+      </div>
   </div>
-</body>
-</html>
+
+<script>
+  function side_abrir() {
+    document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("miSidebar").style.width = "25%";
+    document.getElementById("miSidebar").style.display = "block";
+    document.getElementById("openNav").style.display = 'none';
+  }
+  function side_cerrar() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("miSidebar").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+  }
+  </script>
+  
+  </body>
+  </html>
