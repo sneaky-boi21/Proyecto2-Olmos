@@ -172,3 +172,12 @@ body {
   background-color: #E8EDF0;
   cursor: pointer;
 }
+
+input[type="text"],
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

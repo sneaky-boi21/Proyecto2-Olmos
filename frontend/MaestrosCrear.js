@@ -1,30 +1,40 @@
-document.getElementById('add-class-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var className = document.getElementById('class-name').value;
-    var classDetails = document.getElementById('class-details').value;
-    
-    if (className !== '' && classDetails !== '') {
-      addClass(className, classDetails);
-      document.getElementById('class-name').value = '';
-      document.getElementById('class-details').value = '';
-    }
-  });
-  
-  function addClass(className, classDetails) {
-    var classList = document.getElementById('class-list');
-    
-    var listItem = document.createElement('li');
-    var classBox = document.createElement('div');
-    classBox.classList.add('class-box');
-    
-    var title = document.createElement('h3');
-    title.textContent = className;
-    classBox.appendChild(title);
-    
-    var details = document.createElement('p');
-    details.textContent = classDetails;
-    classBox.appendChild(details);
-    
-    listItem.appendChild(classBox);
-    classList.appendChild(listItem);
+const tareaForm = document.getElementById('tareaForm');
+const nombreTareaInput = document.getElementById('nombreTarea');
+const materiaInput = document.getElementById('materia');
+const detallesInput = document.getElementById('detalles');
+const fechaEntregaInput = document.getElementById('fechaEntrega');
+const tareasList = document.getElementById('tareasList');
+
+// Manejar el evento de envío del formulario
+tareaForm.addEventListener('submit', (event) => {
+  event.preventDefault(); 
+
+  const nombreTarea = nombreTareaInput.value.trim();
+  const materia = materiaInput.value.trim();
+  const detalles = detallesInput.value.trim();
+  const fechaEntrega = fechaEntregaInput.value;
+
+  if (nombreTarea === '' || materia === '' || detalles === '' || fechaEntrega === '') {
+    alert('Por favor, completa todos los campos');
+    return;
   }
+
+  const tareaItem = document.createElement('li');
+  tareaItem.innerHTML = `
+    <strong>${nombreTarea}</strong>
+    <br>
+    Materia: ${materia}
+    <br>
+    Detalles: ${detalles}
+    <br>
+    Fecha de entrega: ${fechaEntrega}
+  `;
+
+  tareasList.appendChild(tareaItem);
+
+  nombreTareaInput.value = '';
+  materiaInput.value = '';
+  detallesInput.value = '';
+  fechaEntregaInput.value = '';
+  }
+);
