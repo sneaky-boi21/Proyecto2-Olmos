@@ -8,17 +8,18 @@ function init() {
 }
 
 function update() {
-    var id_entrega = document.getElementById('input-id').value;
-
+    var id_tarea = document.getElementById('input-id').value;
+    var calificacion = document.getElementById('input-grade').value;
+    var retroalimentacion = document.getElementById('input-feedback').value;
         axios({
-            method: 'patch',
-            url: `http://localhost:3000/sistemaEntregas/${id_entrega}`,
+            method: 'put',
+            url: `http://localhost:3000/sistemaEntregas/${id_tarea}`,
             data: {
-                id_tarea:id_tarea,
-                id_alumno:id_alumno,
+                //id_tarea:id_tarea,
+                //id_alumno:id_alumno,
                 calificacion:calificacion,
                 retroalimentacion:retroalimentacion,
-                archivo:archivo
+                //archivo:archivo
             }
         }).then(function(res) {
             console.log(res);
