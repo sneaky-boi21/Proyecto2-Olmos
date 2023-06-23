@@ -13,7 +13,7 @@ function init() {
 function update() {
     var id_tarea = document.getElementById('input-id').value;
 
-    if(nombre_tarea && materia && calificacion && fecha_entrega && id_profesor && id_alumno && retroalimentacion && archivo) {
+    if(nombre_tarea && materia && detalles && calificacion && fecha_entrega && id_profesor && id_alumno && retroalimentacion && archivo) {
             axios({
             method: 'put',
             url: `http://localhost:3000/sistema/${id_tarea}`,
