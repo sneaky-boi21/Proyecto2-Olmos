@@ -70,8 +70,8 @@ function userID() {
         url: 'http://localhost:3000/user/userID/' + mail,
     }).then(function (res) {
       console.log(res.data)
-      // Store the user ID using localStorage.setItem()
-      var user_id = res.data.message; // Retrieve the user ID from the response
+      // Almacena el ID de usuario utilizando localStorage.setItem()
+      var user_id = res.data.message; // Recuperar el ID de usuario de la respuesta
       console.log('User ID:', user_id);
       localStorage.setItem("user_id", user_id);
 

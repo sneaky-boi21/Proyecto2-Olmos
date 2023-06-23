@@ -5,7 +5,7 @@ const app = express();
 //Routers
 const sistemaEntregas = require('./backend/routes/sistemaEntregas');
 const sistemaTareas = require('./backend/routes/sistemaTareas');
-//const generar = require('./backend/routes/generar');
+const generar = require('./backend/routes/generar');
 const user = require('./backend/routes/user');
 //Middleware
 //const auth = require('./backend/middleware/auth');
@@ -27,7 +27,7 @@ app.use("/user", user);
 
 app.use("/sistemaEntregas", sistemaEntregas);
 app.use("/sistemaTareas", sistemaTareas);
-//app.use("/generar", generar);
+app.use("/generar", generar);
 app.use(notFound);
 
 app.listen(process.env.PORT || 3000, () => {

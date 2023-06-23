@@ -13,32 +13,32 @@ function init() {
             }
         }
 
-        // Select the existing input element using its id
+        // Selecciona el elemento de entrada existente utilizando su id
         var input = document.getElementById('input-ID');
 
-        // Select the existing button element
+        // Selecciona el elemento de botón existente
         var button = document.querySelector('.btn-primary');
 
-        // Add an event listener to the button to handle the user's submission
+        // Añade un receptor de eventos al botón para gestionar el envío del usuario
         button.addEventListener('click', function() {
-            // Get the id entered by the user
+            // Obtener el id introducido por el usuario
             var id = input.value;
 
-            // Make a GET request to the /png/:id route using axios
+            // Realiza una petición GET a la ruta /png/:id utilizando axios
             axios.get(url + '/png/' + id, { responseType: 'blob' })
                 .then(function(response) {
-                    // Create an object URL from the blob data
+                    // Crear una URL de objeto a partir de los datos blob
                     var url = URL.createObjectURL(response.data);
 
-                    // Create an img element and set its src to the object URL
+                    // Crea un elemento img y establece su src a la URL del objeto
                     var img = document.createElement('img');
                     img.src = url;
 
-                    // Append the img element to the page
+                    // Añadir el elemento img a la página
                     document.body.appendChild(img);
                 })
                 .catch(function(error) {
-                    // Handle error
+                    // Manejar error
                     console.log(error);
                 });
         });

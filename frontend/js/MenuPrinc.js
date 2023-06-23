@@ -27,18 +27,18 @@ function loadAlumnos() {
 }
 
 function displayAlumnos(user) {
-    // Set the desired user_type value
+    // Establezca el valor user_type deseado
     var desiredUserType = 'alumno';
 
-    // Filter the user array to only include users with the desired user_type value
+    // Filtrar el array de usuarios para incluir sólo los usuarios con el valor user_type deseado
     var filteredUser = user.filter(function(u) {
         return u.user_type === desiredUserType;
     });
 
-    // Create a table element
+    // Crear un elemento de tabla
     var table = document.createElement('table');
 
-    // Create a row for the table headers
+    // Crear una fila para las cabeceras de la tabla
     var headerRow = document.createElement('tr');
     var idHeader = document.createElement('th');
     idHeader.textContent = 'ID';
@@ -54,7 +54,7 @@ function displayAlumnos(user) {
     headerRow.appendChild(emailHeader);
     table.appendChild(headerRow);
 
-    // Create a row for each user
+    // Crear una fila para cada usuario
     for (var i = 0; i < filteredUser.length; i++) {
         var row = document.createElement('tr');
         var idCell = document.createElement('td');
@@ -72,7 +72,7 @@ function displayAlumnos(user) {
         table.appendChild(row);
     }
 
-    // Append the table to the container element
+    // Añadir la tabla al elemento contenedor
     var container = document.querySelector('#table-container');
     container.appendChild(table);
 }

@@ -27,10 +27,10 @@ function loadTareas() {
 }
 
 function displayTareas(tareas) {
-    // Create a table element
+    // Crear un elemento de tabla
     var table = document.createElement('table');
 
-    // Create a row for the table headers
+    // Crear una fila para las cabeceras de la tabla
     var headerRow = document.createElement('tr');
     var idHeader = document.createElement('th');
     idHeader.textContent = 'ID Tarea';
@@ -46,7 +46,7 @@ function displayTareas(tareas) {
     headerRow.appendChild(dueDateHeader);
     table.appendChild(headerRow);
 
-    // Create a row for each tarea
+    // Crear una fila para cada tarea
     for (var i = 0; i < tareas.length; i++) {
         var row = document.createElement('tr');
         var idCell = document.createElement('td');
@@ -64,7 +64,7 @@ function displayTareas(tareas) {
         table.appendChild(row);
     }
 
-    // Append the table to the container element
+    // Añadir la tabla al elemento contenedor
     var container = document.querySelector('#table-container');
     container.appendChild(table);
 }

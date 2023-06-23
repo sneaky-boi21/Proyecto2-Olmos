@@ -5,11 +5,11 @@ const db = require('../../config/database');
 tareas.post("/", async (req, res, next) => {
     const {nombre_tarea, materia, detalles, calificacion, fecha_entrega, id_profesor, id_alumno, retroalimentacion, archivo} = req.body;
 
-    // Create arrays to hold the field names and values
+    // Crear arrays para contener los nombres y valores de los campos
     let fields = [];
     let values = [];
 
-    // Add field names and values to the arrays for each field that is present in req.body
+    // Añade nombres de campo y valores a las arrays para cada campo presente en req.body
     if (nombre_tarea) {
         fields.push('nombre_tarea');
         values.push(`'${nombre_tarea}'`);
@@ -47,9 +47,9 @@ tareas.post("/", async (req, res, next) => {
         values.push(`'${archivo}'`);
     }
 
-    // Check if at least one field is present
+    // Comprobar si al menos un campo está presente
     if (fields.length > 0) {
-        // Build the INSERT statement using the field names and values arrays
+        // Construye la sentencia INSERT utilizando las matrices de nombres de campo y valores
         let query = "INSERT INTO tareas(" + fields.join(', ') + ")";
         query += " VALUES (" + values.join(', ') + ")";
 
@@ -60,7 +60,7 @@ tareas.post("/", async (req, res, next) => {
         }
         return res.status(500).json({code: 500, message: "Ocurrió un error"});
     } else {
-        // Handle case where no fields are present
+        // Manejar el caso en el que no hay campos
         return res.status(500).json({code: 500, message: "Campos incompletos"});
     }
 });

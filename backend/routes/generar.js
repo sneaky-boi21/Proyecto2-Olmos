@@ -1,30 +1,29 @@
 var express = require('express');
+const generar = express.Router();
 var plantuml = require('node-plantuml');
 var axios = require('axios');
 const db = require('../../config/database');
 
-var app = express();
-
-app.get('/png/:id([0-9]{1,3})', function (req, res) {
+generar.get('/png/:id([0-9]{1,3})', function (req, res) {
   res.set('Content-Type', 'image/png');
 
-  // Query the database using the connection pool from database.js
+  // Consulta la base de datos utilizando el pool de conexiones desde database.js
   db.query(`SELECT archivo FROM entregas WHERE id = ${req.params.id}`)
     .then(function (results) {
       if (results.length === 0) {  
-        // Handle case where no data is found
+        // Manejar el caso en el que no se encuentran datos
         res.status(404).send('Data not found');
       } else {
-        // Get the repository link from the database results
+        // Obtener el enlace del repositorio a partir de los resultados de la base de datos
         var repoLink = results;
 
-        // Make the GitHub API request
+        // Realiza la solicitud de la API de GitHub
         axios.get(repoLink)
           .then(function (response) {
-            // Decode the base64-encoded content of the file
+            // Decodificar el contenido codificado en base64 del archivo
             var content = Buffer.from(response.data.content, 'base64').toString();
 
-            // Generate PNG image from retrieved PlantUML code
+            // Generar imagen PNG a partir del código PlantUML
             var decode = plantuml.decode(content);
             var gen = plantuml.generate({ format: 'png' });
 
@@ -32,17 +31,17 @@ app.get('/png/:id([0-9]{1,3})', function (req, res) {
             gen.out.pipe(res);
           })
           .catch(function (error) {
-            // Handle error
+            // Manejar error
             console.log(error);
             res.status(500).send('Internal server error');
           });
       }
     })
     .catch(function (error) {
-      // Handle error
+      // Manejar error
       console.log(error);
       res.status(500).send('Internal server error');
     });
 });
 
-app.listen(3000);
+module.exports = generar;

@@ -50,13 +50,13 @@ function update() {
     }
     
     function displayEntregas(entregas) {
-        // Get a reference to the table container element
+        // Obtener una referencia al elemento contenedor de la tabla
         var tableContainer = document.querySelector("#table-container");
       
-        // Create the table element
+        // Crear el elemento de tabla
         var table = document.createElement("table");
       
-        // Create the table header row
+        // Crear la fila de cabecera de la tabla
         var headerRow = document.createElement("tr");
         var headers = ["ID Entrega", "ID Tarea", "ID Alumno", "Calificacion", "Retroalimentacion", "Archivo"];
         headers.forEach(function (headerText) {
@@ -66,7 +66,7 @@ function update() {
         });
         table.appendChild(headerRow);
       
-        // Create the table body rows
+        // Crear las filas del cuerpo de la tabla
         entregas.forEach(function (entrega) {
           var tr = document.createElement("tr");
           var values = [entrega.id_entrega, entrega.id_tarea, entrega.id_alumno, entrega.calificacion, entrega.retroalimentacion, entrega.archivo];
@@ -78,7 +78,7 @@ function update() {
           table.appendChild(tr);
         });
       
-        // Append the table to the table container
+        // Añadir la tabla al contenedor de tablas
         tableContainer.appendChild(table);
       }
       
