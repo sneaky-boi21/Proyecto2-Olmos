@@ -28,7 +28,7 @@ function loadAlumnos() {
 
 function displayAlumnos(user) {
     // Set the desired user_type value
-    var desiredUserType = 'maestro';
+    var desiredUserType = 'alumno';
 
     // Filter the user array to only include users with the desired user_type value
     var filteredUser = user.filter(function(u) {
