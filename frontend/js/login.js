@@ -27,6 +27,8 @@ function login() {
       if(res.data.code === 200) {
           loadin(res.user_mail);
           localStorage.setItem("token", res.data.message);
+          console.log(res.data)
+          userID(res.user_mail);
       } 
       else {
           alert("Inicio de sesión incorrecto");
@@ -55,6 +57,24 @@ function loadin() {
         // Manejo de errores
         alert("Tipo de usuario desconocido");
       }
+    }).catch(function (error) {
+      console.log(error);
+    });
+}
+
+function userID() {
+  var mail = document.getElementById('input-mail').value;
+
+    axios({
+        method: 'get',
+        url: 'http://localhost:3000/user/userID/' + mail,
+    }).then(function (res) {
+      console.log(res.data)
+      // Store the user ID using localStorage.setItem()
+      var user_id = res.data.message; // Retrieve the user ID from the response
+      console.log('User ID:', user_id);
+      localStorage.setItem("user_id", user_id);
+
     }).catch(function (error) {
       console.log(error);
     });
