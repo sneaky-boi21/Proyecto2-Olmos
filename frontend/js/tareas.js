@@ -41,18 +41,9 @@ function displayTareas(tareas) {
     var subjectHeader = document.createElement('th');
     subjectHeader.textContent = 'Materia';
     headerRow.appendChild(subjectHeader);
-    var gradeHeader = document.createElement('th');
-    gradeHeader.textContent = 'Calificacion';
-    headerRow.appendChild(gradeHeader);
     var dueDateHeader = document.createElement('th');
     dueDateHeader.textContent = 'Fecha de Entrega';
     headerRow.appendChild(dueDateHeader);
-    var feedbackHeader = document.createElement('th');
-    feedbackHeader.textContent = 'Retroalimentacion';
-    headerRow.appendChild(feedbackHeader);
-    var fileHeader = document.createElement('th');
-    fileHeader.textContent = 'Archivo';
-    headerRow.appendChild(fileHeader);
     table.appendChild(headerRow);
 
     // Create a row for each tarea
@@ -67,18 +58,9 @@ function displayTareas(tareas) {
         var subjectCell = document.createElement('td');
         subjectCell.textContent = tareas[i].materia;
         row.appendChild(subjectCell);
-        var gradeCell = document.createElement('td');
-        gradeCell.textContent = tareas[i].calificacion;
-        row.appendChild(gradeCell);
         var dueDateCell = document.createElement('td');
         dueDateCell.textContent = tareas[i].fecha_entrega;
         row.appendChild(dueDateCell);
-        var feedbackCell = document.createElement('td');
-        feedbackCell.textContent = tareas[i].retroalimentacion;
-        row.appendChild(feedbackCell);
-        var fileCell = document.createElement('td');
-        fileCell.textContent = tareas[i].archivo;
-        row.appendChild(fileCell);
         table.appendChild(row);
     }
 
