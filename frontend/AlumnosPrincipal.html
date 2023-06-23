@@ -2,7 +2,9 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-  <link href="Alumnos1.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="MaestrosPrincipal.css" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -10,22 +12,42 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
 </head>
 <body>
-   <div class="Subfondo">
-      <div class="Titulo">
-          <span class="Titulo1">Menu Principal</span>
-            <span class="Titulo2">Alumnos</span>
-          </div>
+  <div class="Sidebar" style="display:none" id="miSidebar">
+    <button class="Close-button" onclick="side_cerrar()">Cerrar &times;</button>
+    <a href="AlumnosTareas.html" class="RetroA">Carga y Visualiza Tareas Pendientes</a>
+  </div>
+  <div id="main">
+    <button id="openNav" class="Sidebutton" onclick="side_abrir()">&#9776;</button>
+    <div class="Contenedor">
+      <div class="Subfondo">
+        <div class="Titulo">
+            <span class="Titulo1">Menu Principal</span>
+              <span class="Titulo2">Alumnos</span>
+            </div>
+        </div>
       <div class="Cuadrado">
         <div class="SubCuadrado"></div>
             <span class="Subtitulo1">Ejercicios</span>
             <span class="Subtitulo2">Asignados</span>
                 <div class="Ejercicios">
                   <div id="ejercicios-container"></div>
-                </div>
-              <button class="RetroA">Carga y Visualiza Tareas Pendientes</button>
-          <button class="Calif">Calificaciones</button>
-        <button class="VerMas">Ver Tareas </button>
-    </div>
+          </div>
+      </div>
   </div>
-</body>
-</html>
+
+<script>
+  function side_abrir() {
+    document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("miSidebar").style.width = "25%";
+    document.getElementById("miSidebar").style.display = "block";
+    document.getElementById("openNav").style.display = 'none';
+  }
+  function side_cerrar() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("miSidebar").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+  }
+  </script>
+  
+  </body>
+  </html>
