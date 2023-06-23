@@ -44,6 +44,9 @@ function displayTareas(tareas) {
     var dueDateHeader = document.createElement('th');
     dueDateHeader.textContent = 'Fecha de Entrega';
     headerRow.appendChild(dueDateHeader);
+    var teacherHeader = document.createElement('th');
+    teacherHeader.textContent = 'ID Profesor';
+    headerRow.appendChild(teacherHeader);
     table.appendChild(headerRow);
 
     // Create a row for each tarea
@@ -61,6 +64,9 @@ function displayTareas(tareas) {
         var dueDateCell = document.createElement('td');
         dueDateCell.textContent = tareas[i].fecha_entrega;
         row.appendChild(dueDateCell);
+        var teacherCell = document.createElement('td');
+        teacherCell.textContent = tareas[i].id_profesor;
+        row.appendChild(teacherCell);
         table.appendChild(row);
     }
 

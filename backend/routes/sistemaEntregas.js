@@ -22,7 +22,7 @@ entregas.post("/", async (req, res, next) => {
         values.push(archivo);
       }
   
-      let query = `INSERT INTO tareas(${columns.join(",")}) VALUES (${values.map(() => "?").join(",")})`;
+      let query = `INSERT INTO entregas(${columns.join(",")}) VALUES (${values.map(() => "?").join(",")})`;
   
       const rows = await db.query(query, values);
   

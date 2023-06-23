@@ -1,6 +1,8 @@
 window.onload = init;
 var headers = {};
 var url = "http://localhost:3000";
+localStorage.getItem("user_id");
+var userID = localStorage.getItem("user_id");
 
 function init() {
     document.querySelector('.btn-primary').addEventListener('click', insert); 
@@ -20,6 +22,7 @@ function insert() {
             materia:materia,
             detalles:detalles,
             fecha_entrega:fecha_entrega,
+            id_profesor:userID
         }
     }).then(function(res) {
         console.log(res);
