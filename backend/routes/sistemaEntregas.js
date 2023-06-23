@@ -3,23 +3,37 @@ const entregas = express.Router();
 const db = require('../../config/database');
 
 entregas.post("/", async (req, res, next) => {
-    const {nombre_tarea, materia, detalles, calificacion, fecha_entrega, id_profesor, id_alumno, retroalimentacion, archivo} = req.body;
-
-    if(nombre_tarea && materia && detalles && calificacion && fecha_entrega && id_profesor && id_alumno && retroalimentacion && archivo) {
-        let query = "INSERT INTO tareas(nombre_tarea, materia, detalles, calificacion, fecha_entrega, id_profesor, id_alumno, retroalimentacion, archivo)";
-        query += ` VALUES ('${nombre_tarea}', '${materia}', '${detalles}', '${calificacion}', '${fecha_entrega}', '${id_profesor}', 
-        '${id_alumno}', '${retroalimentacion}', '${archivo}')`;
-    
-        const rows = await db.query(query);
-        
-        if(rows.affectedRows == 1) {
-            return res.status(201).json({code: 201, message: "Tarea creada correctamente"});
-        }
-        return res.status(500).json({code: 500, message: "Ocurrió un error"});
+    const { id_tarea, id_alumno, calificacion, retroalimentacion, archivo } = req.body;
+  
+    if (id_tarea && id_alumno) {
+      let columns = ["id_tarea", "id_alumno"];
+      let values = [id_tarea, id_alumno];
+  
+      if (calificacion) {
+        columns.push("calificacion");
+        values.push(calificacion);
+      }
+      if (retroalimentacion) {
+        columns.push("retroalimentacion");
+        values.push(retroalimentacion);
+      }
+      if (archivo) {
+        columns.push("archivo");
+        values.push(archivo);
+      }
+  
+      let query = `INSERT INTO tareas(${columns.join(",")}) VALUES (${values.map(() => "?").join(",")})`;
+  
+      const rows = await db.query(query, values);
+  
+      if (rows.affectedRows == 1) {
+        return res.status(201).json({ code: 201, message: "Tarea creada correctamente" });
+      }
+      return res.status(500).json({ code: 500, message: "Ocurrió un error" });
     }
-    return res.status(500).json({code: 500, message: "Campos incompletos"});
-});
-
+    return res.status(500).json({ code: 500, message: "Campos incompletos" });
+  });
+ 
 entregas.delete("/:id([0-9]{1,3})", async (req, res, next) => {
     const query = `DELETE FROM tareas WHERE id_tarea=${req.params.id}`;
     const rows = await db.query(query);
