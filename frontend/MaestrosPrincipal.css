@@ -181,3 +181,8 @@ input[type="date"] {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+h1{
+  font-family: Montserrat;
+  font-weight: Bold;
+}
