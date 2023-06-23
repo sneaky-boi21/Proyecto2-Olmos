@@ -5,18 +5,18 @@ const db = require('../../config/database');
 
 var app = express();
 
-app.get('/png/:id', function (req, res) {
+app.get('/png/:id([0-9]{1,3})', function (req, res) {
   res.set('Content-Type', 'image/png');
 
   // Query the database using the connection pool from database.js
-  db.query('SELECT archivo FROM entregas WHERE id = ?', [req.params.id])
+  db.query(`SELECT archivo FROM entregas WHERE id = ${req.params.id}`)
     .then(function (results) {
-      if (results.length === 0) {
+      if (results.length === 0) {  
         // Handle case where no data is found
         res.status(404).send('Data not found');
       } else {
         // Get the repository link from the database results
-        var repoLink = results[0].repo_link;
+        var repoLink = results;
 
         // Make the GitHub API request
         axios.get(repoLink)

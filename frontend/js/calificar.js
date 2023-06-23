@@ -3,8 +3,18 @@ var headers = {};
 var url = "http://localhost:3000";
 
 function init() {
-    document.querySelector('.btn-primary').addEventListener('click', update);   
-    loadEntregas();
+    if(localStorage.getItem("token")) {
+        token = localStorage.getItem("token");
+        headers = {
+            headers: {
+                'Authorization': "bearer " + localStorage.getItem("token")
+            }
+        }
+        document.querySelector('.btn-primary').addEventListener('click', update);   
+        loadEntregas();
+    } else {
+        window.location.href = "login.html";
+    }
 }
 
 function update() {

@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="MaestrosPrincipal.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./js/mostrar.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
   
 </head>
 <body>
@@ -29,7 +34,15 @@
             <span class="Subtitulo1">Diagramas</span>
             <span class="Subtitulo2">Asignar</span>
                 <div class="Ejercicios">
-                  <div id="ejercicios-container"></div>
+                  <div id="ejercicios-container">
+                    <div class="form-group">
+                      <label for="input-tarea">ID de la Entrega:</label>
+                      <input type="text" class="form-control" id="input-ID" placeholder="ID de la Entrega:">
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <button class="btn btn-primary">Generar Diagrama</button>
+                    </div>
+                  </div>
           </div>
       </div>
   </div>

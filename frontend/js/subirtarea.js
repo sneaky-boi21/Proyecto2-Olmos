@@ -5,8 +5,18 @@ localStorage.getItem("user_ID")
 const userID = localStorage.getItem("user_ID");
 
 function init() {
-    document.querySelector('.btn-primary').addEventListener('click', insert); 
-    }      
+    if(localStorage.getItem("token")) {
+        token = localStorage.getItem("token");
+        headers = {
+            headers: {
+               'Authorization': "bearer " + localStorage.getItem("token")
+            }
+        }
+        document.querySelector('.btn-primary').addEventListener('click', insert); 
+    } else {
+        window.location.href = "login.html";
+    }
+}
 
 function insert() {
     var archivo = document.getElementById('input-file').value;

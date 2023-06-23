@@ -5,8 +5,18 @@ localStorage.getItem("user_id");
 var userID = localStorage.getItem("user_id");
 
 function init() {
-    document.querySelector('.btn-primary').addEventListener('click', insert); 
-    }      
+    if(localStorage.getItem("token")) {
+        token = localStorage.getItem("token");
+        headers = {
+             headers: {
+                'Authorization': "bearer " + localStorage.getItem("token")
+            }
+        }
+        document.querySelector('.btn-primary').addEventListener('click', insert); 
+    } else {
+         window.location.href = "login.html";
+    }
+}
 
 function insert() {
     var nombre_tarea = document.getElementById('input-name').value;
