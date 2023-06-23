@@ -18,35 +18,30 @@ body {
   background-size: cover;
 }
 
-.Titulo {
-  width: 723px;
-  height: 64px;
-  background: #E8EDF0;
-  position: absolute;
-  top: 17px;
-  left: 41.4%;  
-}
+
 
 .Titulo1 {
   color: #0e2c48;
   position: absolute;
-  top: 24px;
-  left: 11px;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: Montserrat;
-  font-weight: Bold;
-  font-size: 42px;
-  text-align: left;
+  font-weight: bold;
+  font-size: 82px;
+  text-align: center;
 }
 
 .Titulo2 {
   color: #70869b;
   position: absolute;
-  top: 0px;
-  left: 13%;  
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: Montserrat;
-  font-weight: SemiBold;
-  font-size: 27px;
-  text-align: left;
+  font-weight: 600;
+  font-size: 57px;
+  text-align: center;
 }
 
 .Subfondo {
@@ -72,33 +67,30 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .Subtitulo1 {
-  width: 80px;
-  color: rgba(15,45,72,1);
+  color: rgba(15, 45, 72, 1);
   position: absolute;
-  top: 4%;
-  left: 46%;
-  transform: translate(-50%, -50%);
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%, 0);
   font-family: Montserrat;
-  font-weight: SemiBold;
+  font-weight: 600;
   font-size: 46px;
   opacity: 1;
-  text-align: left;
+  text-align: center;
 }
 
 .Subtitulo2 {
-  width: 71px;
-  color: rgba(112,134,155,1);
+  color: rgba(112, 134, 155, 1);
   position: absolute;
-  top: 9%;
-  left: 48%;
-  transform: translate(-50%, -50%);
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: Montserrat;
-  font-weight: Medium;
+  font-weight: 500;
   font-size: 28px;
   opacity: 1;
-  text-align: left;
+  text-align: center;
 }
 
 .Ejercicios {
