@@ -8,7 +8,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="./js/calificaciones.js"></script>
+  <script src="./js/calificar.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
 </head>
 <body>
@@ -41,9 +41,11 @@
                     <input type="number" id="calificacion" min="0" max="100">
                     <label for="retroalimentacion">Retroalimentación:</label>
                     <textarea id="retroalimentacion"></textarea>
-                    <button type="submit">Guardar calificación y retroalimentación</button>
+                    <button class="btn btn-primary">Guardar calificación y retroalimentación</button>
                   </form>
-                  <div id="ejercicios-container"></div>
+                  <div id="ejercicios-container">
+                    <div id="table-container"></div>
+                  </div>
           </div>
       </div>
   </div>
