@@ -40,6 +40,12 @@ user.post("/login", async (req, res, next) => {
     return res.status(500).json({ code: 500, message: "Campos incompletos"});
 });
 
+user.get("/", async (req, res, next) => {
+    const query = "SELECT * FROM user";
+    const rows = await db.query(query);
+
+    return res.status(200).json({ code: 200, message: rows });
+});
 
 user.get('/profile/:user_mail([\\w\\.\\-\\+]+@[\\w\\.\\-]+)', async (req, res, next) => {
     const user_mail = req.params.user_mail;
