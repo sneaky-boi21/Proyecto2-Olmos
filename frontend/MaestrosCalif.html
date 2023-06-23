@@ -30,9 +30,19 @@
         </div>
       <div class="Cuadrado">
         <div class="SubCuadrado"></div>
-            <span class="Subtitulo1">Ejercicios</span>
-            <span class="Subtitulo2">Asignados</span>
+            <span class="Subtitulo1">Calificaciones</span>
+            <span class="Subtitulo2">Asignar</span>
                 <div class="Ejercicios">
+                  <h1>Asignar calificaciones y retroalimentación:</h1>
+                  <form id="calificacionForm">
+                    <label for="idTarea">ID de la tarea:</label>
+                    <input type="text" id="idTarea">
+                    <label for="calificacion">Calificación:</label>
+                    <input type="number" id="calificacion" min="0" max="100">
+                    <label for="retroalimentacion">Retroalimentación:</label>
+                    <textarea id="retroalimentacion"></textarea>
+                    <button type="submit">Guardar calificación y retroalimentación</button>
+                  </form>
                   <div id="ejercicios-container"></div>
           </div>
       </div>
