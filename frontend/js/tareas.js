@@ -57,4 +57,4 @@ function displayTareas(tareas) {
         </table>`
     } 
     body.innerHTML +=  `</table>`; 
-}
+} 
