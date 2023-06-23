@@ -4,11 +4,11 @@ const user = express.Router();
 const db = require('../../config/database');
 
 user.post("/signin", async (req, res, next) => {
-    const { user_name, user_mail, user_password, user_type} = req.body;
+    const { user_name, user_surname, user_mail, user_password, user_type} = req.body;
 
-    if(user_name && user_mail && user_password && user_type) {
-        let query = "INSERT INTO user(user_name, user_mail, user_password, user_type) ";
-        query += ` VALUES ('${user_name}', '${user_mail}', '${user_password}', '${user_type}');`;
+    if(user_name && user_surname && user_mail && user_password && user_type) {
+        let query = "INSERT INTO user(user_name, user_surname, user_mail, user_password, user_type) ";
+        query += ` VALUES ('${user_name}', '${user_surname}', '${user_mail}', '${user_password}', '${user_type}');`;
     
         const rows = await db.query(query);
         
@@ -57,6 +57,25 @@ user.get('/profile/:user_mail([\\w\\.\\-\\+]+@[\\w\\.\\-]+)', async (req, res, n
         if (respuesta.length > 0) {
             const user_type = respuesta[0].user_type;
             return res.status(200).json({ code: 200, message: user_type });
+        } else {
+            return res.status(404).json({ code: 404, message: 'User not found' });
+        }
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({ code: 500, message: 'Internal server error' });
+    }
+});
+
+user.get('/userID/:user_mail([\\w\\.\\-\\+]+@[\\w\\.\\-]+)', async (req, res, next) => {
+    const user_mail = req.params.user_mail;
+
+    try {
+        const respuesta = await db.query(
+            `SELECT user_id FROM user WHERE user_mail = ?`,[user_mail]);
+
+        if (respuesta.length > 0) {
+            const user_id = respuesta[0].user_id;
+            return res.status(200).json({ code: 200, message: user_id });
         } else {
             return res.status(404).json({ code: 404, message: 'User not found' });
         }

@@ -2,7 +2,7 @@ const express = require('express');
 const entregas = express.Router();
 const db = require('../../config/database');
 
-/*entregas.post("/", async (req, res, next) => {
+entregas.post("/", async (req, res, next) => {
     const {nombre_tarea, materia, detalles, calificacion, fecha_entrega, id_profesor, id_alumno, retroalimentacion, archivo} = req.body;
 
     if(nombre_tarea && materia && detalles && calificacion && fecha_entrega && id_profesor && id_alumno && retroalimentacion && archivo) {
@@ -47,7 +47,7 @@ entregas.put("/:id([0-9]{1,3})", async (req, res, next) => {
     }
     return res.status(500).json({code: 500, message: "Campos incompletos"});
     
-});*/
+});
 
 entregas.patch("/:id([0-9]{1,3})", async (req, res, next) => {
    
@@ -56,7 +56,7 @@ entregas.patch("/:id([0-9]{1,3})", async (req, res, next) => {
         const rows = await db.query(query);
         
         if(rows.affectedRows == 1) {
-            return res.status(200).json({code: 200, message: "Tarea subida correctamente"});
+            return res.status(200).json({code: 200, message: "Tarea actualizada correctamente"});
         }
         return res.status(500).json({code: 500, message: "Ocurrió un error"});
     }
