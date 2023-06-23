@@ -174,7 +174,7 @@ input[type="date"] {
   border-radius: 4px;
 }
 
-h1{
+.form-control{
   font-family: Montserrat;
   font-weight: Bold;
 }
