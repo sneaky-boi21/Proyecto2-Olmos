@@ -27,32 +27,35 @@ function loadEntregas() {
 }
 
 function displayEntregas(entregas) {
-    var body = document.querySelector("body");
-    body.innerHTML += `
-
-    <table>
-    <tr>
-      <th>Nombre</th>
-      <th>Apellidos</th>
-      <th>Telefono</th>
-      <th>Correo</th>
-      <th>Direccion</th>
-    </tr>`
-    for( var i = 0; i < empleados.length; i++) {
-
-
-        body.innerHTML +=  
-        `<table>
-        <tr>
-        <h3>
-          <td>${empleados[i].nombre}</td>
-          <td>${empleados[i].apellidos}</td>
-          <td>${empleados[i].telefono}</td>
-          <td>${empleados[i].correo}</td>
-          <td>${empleados[i].direccion}</td>
-        </h3>
-        </tr>
-        </table>`
-    } 
-    body.innerHTML +=  `</table>`; 
-}
+    // Get a reference to the table container element
+    var tableContainer = document.querySelector("#table-container");
+  
+    // Create the table element
+    var table = document.createElement("table");
+  
+    // Create the table header row
+    var headerRow = document.createElement("tr");
+    var headers = ["ID Entrega", "ID Tarea", "ID Alumno", "Calificacion", "Retroalimentacion", "Archivo"];
+    headers.forEach(function (headerText) {
+      var th = document.createElement("th");
+      th.textContent = headerText;
+      headerRow.appendChild(th);
+    });
+    table.appendChild(headerRow);
+  
+    // Create the table body rows
+    entregas.forEach(function (entrega) {
+      var tr = document.createElement("tr");
+      var values = [entrega.id_entrega, entrega.id_tarea, entrega.id_alumno, entrega.calificacion, entrega.retroalimentacion, entrega.archivo];
+      values.forEach(function (value) {
+        var td = document.createElement("td");
+        td.textContent = value;
+        tr.appendChild(td);
+      });
+      table.appendChild(tr);
+    });
+  
+    // Append the table to the table container
+    tableContainer.appendChild(table);
+  }
+  

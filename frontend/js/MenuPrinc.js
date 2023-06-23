@@ -40,6 +40,9 @@ function displayAlumnos(user) {
 
     // Create a row for the table headers
     var headerRow = document.createElement('tr');
+    var idHeader = document.createElement('th');
+    idHeader.textContent = 'ID';
+    headerRow.appendChild(idHeader);
     var nameHeader = document.createElement('th');
     nameHeader.textContent = 'Nombres';
     headerRow.appendChild(nameHeader);
@@ -54,6 +57,9 @@ function displayAlumnos(user) {
     // Create a row for each user
     for (var i = 0; i < filteredUser.length; i++) {
         var row = document.createElement('tr');
+        var idCell = document.createElement('td');
+        idCell.textContent = filteredUser[i].user_id;
+        row.appendChild(idCell);
         var nameCell = document.createElement('td');
         nameCell.textContent = filteredUser[i].user_name;
         row.appendChild(nameCell);
